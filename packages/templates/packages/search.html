@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <div style="margin-top: 90px;">
+       
+        <div id="packagesss">
+          <div class="pack">P</div>
+          <div class="pack">A</div>
+          <div class="pack">C</div>
+          <div class="pack">K</div>
+          <div class="pack">A</div>
+          <div class="pack">G</div>
+          <div class="pack">E</div>
+          <div class="pack">S</div>
+      </div>
+      
+      {% for i in packages %}
+
+         
+   
+         <div class="box" style="margin-left: 50px; border: 1px solid black; margin-bottom: 20px; 
+         display: flex; height: 400px; margin-top: 20px; margin-right: 50px;">
+
+            <img src="{{i.package_image.url}}" alt="">
+            <div class="content" style="margin-left: 50px;">
+                <h1>{{i.package_name}}</h1>
+                <h3 style="color: orange;"><i class='bx bx-map'></i>{{i.package_destination}}</h3>
+                <p>{{i.package_description}}</p>
+                <div style="color: orange;" class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <div class="price">Rs. {{i.package_price}}</div>
+                <br>
+                <a href="{% url 'place-detail' i.id %} "  class="btn">View Details</a>
+                </div>
+        </div>
+      
+
+      {% endfor %}
+    
+    </div>
+
+
+{% endblock %}

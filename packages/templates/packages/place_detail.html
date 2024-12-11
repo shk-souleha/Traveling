@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      
+  
+    <div style="margin-top: 90px;">
+       <h1 style="text-align: center;">{{package}} Package </h1> 
+         
+
+         {% for object in package.place_set.all %}
+
+         <div class="box" style="margin-left: 50px; border: 1px solid black; margin-bottom: 20px; 
+         display: flex; height: 400px; margin-top: 0px; margin-right: 50px;">
+
+
+            <img style="width: 600px;" src="{{object.place_image.url}}" alt="">
+            <div class="content" style="margin-left: 50px;">
+                <h1>{{object.place_name}}</h1>
+                <!--<h3 style="color: orange;"><i class='bx bx-map'></i>{{object.place_destination}}</h3>-->
+                <p>{{object.place_description}}</p>
+                <p>{{object.place_attraction}}</p>
+                <div style="color: orange;" class="stars">
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star' ></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <!--<div class="price">Rs. {{object.place_price}}</div>-->
+              
+                
+                </div>
+           
+        </div>
+      
+    </div> 
+        {% endfor %}
+       
+    
+
+    </div> 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,434 @@
+/*body{
+        background-image: url(footer.jpg);
+        background-size: cover;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }*/
+
+    /* Make the video fill the entire screen */
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind other content */
+    object-fit: cover; /* Cover the entire area */
+  }
+
+  /* ------------------ NAVBAR STARTS-------------*/
+  /* Reset and basic styling */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body {
+    font-family: Arial, sans-serif;
+} */
+
+/* .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1; /* Ensures navbar appears over the video */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation links styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+    border-radius: 4px;
+}
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.search-box input[type="text"] {
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Auth buttons styling */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons .login-btn,
+.auth-buttons .register-btn {
+    background-color: blanchedalmond;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons .login-btn:hover,
+.auth-buttons .register-btn:hover {
+    background-color: blanchedalmond;
+}
+
+  /* ------------------ NAVBAR ENDS-------------*/
+
+       /* navbar starts 
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .navbar h1 {
+        margin: 0;
+        color: #fff;
+    }
+
+     .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .navbar li {
+        margin-right: 20px;
+    }
+
+    .navbar li:last-child {
+        margin-right: 0;
+    } 
+
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        
+    }
+
+    .navbar a:hover {
+        color: cornsilk;
+    }
+
+    .btn {
+        background-color: blanchedalmond;
+        color: #333;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background-color: burlywood;
+    }
+    /* navbar ends */
+
+    /* home section starts */
+#heading{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 15%;
+    font-size: 80px;
+    
+}
+.div{
+    height: 10%;
+    width: 70%;
+    margin-left: 15%;
+}
+#para{
+    text-align: center;
+    color: aliceblue;
+    
+}
+    /* home section ends */
+
+
+    /* book section starts */
+#booknow{
+    margin-top: 10%;
+    background-color: #fff;
+}
+#book{
+    display: flex;
+    margin-left: 525px;
+    width: 250px;
+    
+}
+.bok{
+    border: 1px solid blanchedalmond;
+    height: 60px;
+    width: 50px;
+    margin-left: 5px;
+    font-size: 50px;
+    font-family: cursive;
+    background-color: blanchedalmond;
+    margin-top: 2px;
+}
+
+#body{
+    border: 1px solid blanchedalmond;
+    margin-top: 5px;
+    height: 500px;
+    width: 1250px;
+    margin-left: 30px;
+    display: flex;
+    background-color: #fff;
+}
+.imggg{
+    
+    height: 450px;
+    width: 600px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.inputbox {
+    text-align: center;
+}
+.inputbox input{
+    width: 300px;
+    height: 25px;
+}
+.btn{
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 15px;
+    text-decoration: none;
+    
+}
+.form{
+    text-align: center;
+    margin-top: 8%;
+    
+}
+/* Book Section ends*/
+
+/* package section starts */
+#packagesss{
+    display: flex;
+    width: 350px;
+    margin-left: 500px;
+    
+}
+.pack{
+    border: 1px solid blanchedalmond;
+    font-size: 50px;
+    font-family: cursive;
+    background-color: blanchedalmond;
+    height: 60px;
+    width: 50px;
+    margin-left: 5px;
+}
+.box-container{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    
+
+}
+.box-container .box{
+    border: 1px solid white;
+    margin-left: 45px;
+    margin-top: 30px;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+.box-container .box:hover img{
+    transform: scale(1.1);
+    
+    
+}
+.box-container .box .content{
+    border: 1px solid white;
+    text-align: center;
+}
+.box-container .box .content:hover{
+    color: darkolivegreen;
+}
+.box-container .box .content h3{
+    font-size: 25px;
+    color: #333;
+}
+.box-container .box .content h3:hover{
+    color: darkolivegreen;
+}
+.box-container .box .content h3 i{
+    color: orange;
+}
+.box-container .box .content .stars{
+    color: orange;
+}
+/* packages section ends */
+
+/* services section starts */
+section #services{
+    display: flex;
+    margin-left: 525px;
+    width: 250px;
+    
+}
+section #services .ser{
+    border: 1px solid blanchedalmond;
+    height: 60px;
+    width: 50px;
+    margin-left: 5px;
+    font-size: 50px;
+    font-family: cursive;
+    background-color: blanchedalmond;
+    margin-top: 2px;
+}
+#container{
+    border: 1px solid white;
+    height: 500px;
+    width: 1300px;
+    display: flex;
+}
+#container .safety{
+    border: 1px solid white;
+    margin-top: 40px;
+    height: 400px;
+    width:550px;
+    margin-left: 55px;
+    text-align: center;
+    border-radius: 5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+    
+
+#container .safety i{
+    color: orange;
+    font-size: 50px;
+    margin-top: 40px;
+
+}
+/* services section ends */
+
+/* gallery section starts */
+section #galleryyy{
+    display: flex;
+    margin-left: 525px;
+    width: 250px;
+}
+section #galleryyy .gall{
+    border: 1px solid blanchedalmond;
+    height: 60px;
+    width: 50px;
+    margin-left: 5px;
+    font-size: 50px;
+    font-family: cursive;
+    background-color: blanchedalmond;
+    margin-top: 2px; 
+}
+.photo{
+    border: 1px solid white;
+    height: 200px;
+    width: 1200px;
+    margin-top: 20px;
+    margin-left: 50px;
+    display: flex;
+}
+.photo .pht{
+    border: 1px solid white;
+    height: 200px;
+    width: 500px;
+    margin-left: 20px;
+}
+/* gallery section ends */
+
+/* Footer Content*/
+
+.fot{
+    background-color: #333;
+}
+.fot .footer{
+    display: flex;
+    height: 300px;
+    width: 1000px;
+    margin-left: 150px;
+}
+.fot .footer .foot{
+    border: 1px solid #333;
+    height: 280px;
+    width: 230px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: aliceblue;
+}
+.footer-bottom{
+    color: aliceblue;
+}

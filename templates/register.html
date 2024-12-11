@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="border: 1px solid black; margin: 70px; padding: 15px; margin-top: 85px;">
+
+<h1 style="text-align: center; background-color: black; color: whitesmoke;">Register</h1>
+
+<form method="post">
+    {% csrf_token %}
+    
+    {% for field in form %}
+        <div style="margin-bottom: 3px;">
+           {{field.label_tag}}
+            
+           {{field}}
+            <br>
+            <br>
+           {% if field.errors %}
+
+                
+               <span style="color: red;">{{field.errors}}</span>   
+           
+           {% endif %}
+
+           <div>{{field.help_text}}</div>
+        </div>
+    {% endfor %}
+    <button style="background-color: rgb(58, 58, 83); color: aliceblue; height: 32px;" 
+    type="sumbit" value="Register">Register</button>
+</form>
+</div>
+{% endblock %}

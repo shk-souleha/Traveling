@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--<div style="border-radius: 10px; border: 2px solid black; margin-bottom: 30px; height: 300px; width: 600px; margin-top: 120px; margin-left: 400px;">
+<h1 style="text-align: center;"> Payment Successfull</h1>
+<p>Thank you for booking with JoyJourney. Your payment has been successfully processed.</p>-->
+
+
+
+<div class="payment-success-container" style="text-align: center; margin: 50px auto; box-shadow: 0 1rem 2rem rgba(0,0,0,.1); width: 800px;">
+    <h1 style="margin-top: 125px;">🎉 Payment Successful! 🎉</h1>
+    <p>Thank you for booking with JoyJourney. Your payment has been successfully processed.</p>
+    
+    <div class="booking-summary" style="margin-top: 20px;">
+        <h3>Booking Summary</h3>
+        <table style="margin: 0 auto; border-collapse: collapse; width: 80%; max-width: 600px;">
+            <tr>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">Booking ID:</th>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">{{ booking.booking_id }}</td>
+            </tr>
+            <tr>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">Package:</th>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">{{ booking.package.package_name }}</td>
+            </tr>
+            <tr>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">Arrival Date:</th>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">{{ booking.arrival_date }}</td>
+            </tr>
+            <tr>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">Leaving Date:</th>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">{{ booking.leaving_date }}</td>
+            </tr>
+            <tr>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">Total Price:</th>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #ccc;">₹{{ booking.total_price }}</td>
+            </tr>
+        </table>
+    </div>
+    
+    
+</div>
+
+
+
+
+</div>
+{% endblock %}

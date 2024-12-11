@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>
+        {% block title %}
+
+
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+<!--   NAVBAR STARTS -->
+
+      <!-- Navigation Bar style= "display: flex; justify-content: center; align-items: center;"-->
+      <nav class="navbar" style="position: fixed;">
+        <div class="container" >
+            <!-- Logo -->
+            <a href="#" class="logo"><i class='bx bxl-trip-advisor'></i>JoyJourney.</a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#book">Book</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+
+            <!-- Search Bar -->
+            <form action="{% url 'search' %}">
+                <div class="search-box">
+                    <input type="text" placeholder="Search..." name="keyword">
+                    <button>🔍</button>
+                </div>
+            </form>
+
+            <!-- Login and Register Buttons -->
+             
+            <div class="auth-buttons">
+                {% if request.user.first_name %}
+ 
+                <a href="{% url 'login' %}" role="button"><button class="login-btn">{{request.user.first_name}}</button></a>
+                <a href="{% url 'logout' %}" role="button"><button class="register-btn">Logout</button></a>
+
+
+                {% else %}
+                <a href="{% url 'login' %}" role="button"><button class="login-btn">Login</button></a>
+                <a href="{% url 'register' %}" role="button"><button class="register-btn">Register</button></a>
+
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <!--    NAVBAR ENDS    -->
+
+
+{% block content %}
+
+
+{% endblock %}
+
+    <!-- Footer Section Starts-->
+<footer class="fot">
+
+    <div class="footer">
+        <div class="foot">
+            <h2>About Us</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias iusto dignissimos blanditiis.</p>
+        </div>
+        <div class="foot">
+            <h2>Branch</h2>
+            <p>Maharshtra</p>
+        </div>
+        <div class="foot">
+            <h2>Quick Links</h2>
+            <div>Home</div>
+            <div>Book</div>
+            <div>Packages</div>
+            <div>Services</div>
+            <div>Gallery</div>
+        </div>
+        <div class="foot">
+            <h2>Follow Us</h2>
+            <div>Instagram</div>
+            <div>Facebook</div>
+            <div>Twitter</div>
+            <div>Linkedin</div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Website Name. All Rights Reserved.</p>
+    </div>
+</footer>
+<!-- Footer section End-->
+
+
+</body>
+</html>

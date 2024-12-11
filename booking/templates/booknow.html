@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="margin-top: 120px">
+     
+     <div style="border: 1px white; margin-bottom: 50px; width: 600px; padding: 20px; margin-left: 350px; box-shadow: 0 1rem 2rem rgba(0,0,0,.1); ">
+     <form action="" method="post">
+          {% csrf_token %}
+          <h1 style="text-align: center;">Booking</h1>
+          {% for field in form %}
+     <div>
+          <h3>{{field.label_tag}}
+          {{field}}</h3>
+          
+     </div>
+     
+          {% endfor %}
+
+          <input style="border-color: 1px black; background-color: blanchedalmond; height: 30px; width: 80px; " type="submit">
+     
+     </form>
+</div>
+</div>
+{% endblock %}
